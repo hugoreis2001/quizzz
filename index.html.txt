@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite Especial 💚</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #e0f7e9, #b8eacb);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 20px;
+        color: #333;
+    }
+    h1 {
+        color: #2e7d32;
+        margin-top: 40px;
+    }
+    .question {
+        background: white;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+    button {
+        background: #2e7d32;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #1b5e20;
+    }
+    #result {
+        display: none;
+        background: white;
+        padding: 25px;
+        margin-top: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+        text-align: center;
+        max-width: 400px;
+    }
+    #result h2 {
+        color: #2e7d32;
+    }
+</style>
+</head>
+<body>
+
+<h1>Isadora, tenho algo pra você...</h1>
+<p>Responda este mini quiz e descubra 💚</p>
+
+<div class="question" id="q1">
+    <p>1️⃣ Onde foi nosso primeiro beijo?</p>
+    <input type="text" id="a1" 
+</div>
+
+<div class="question" id="q2">
+    <p>2️⃣ Complete a frase: "Neném..."?</p>
+    <input type="text" id="a2" 
+</div>
+
+<div class="question" id="q3">
+    <p>3️⃣ O que é melhor, Taylor ou Billie?</p>
+    <input type="text" id="a3"
+</div>
+
+<button onclick="checkAnswers()">Enviar respostas</button>
+
+<div id="result">
+    <h2>🎉 Parabéns, amor!</h2>
+    <p>Você desbloqueou a surpresa: <br><br>
+    Hoje, às <b>20h</b>, vamos jantar na <b>All Natural</b> 🌿<br>
+    Se arrume, vai ser especial 💚</p>
+</div>
+
+<script>
+function checkAnswers() {
+    let ans1 = document.getElementById("a1").value.trim().toLowerCase();
+    let ans2 = document.getElementById("a2").value.trim().toLowerCase();
+    let ans3 = document.getElementById("a3").value.trim().toLowerCase();
+
+    if(ans1 === "maringa clube" && ans2 === "raivoso" && ans3 === "billie"){
+        document.getElementById("result").style.display = "block";
+    } else {
+        alert("Hmm... alguma resposta está errada, tenta de novo 😉");
+    }
+}
+</script>
+
+</body>
+</html>
